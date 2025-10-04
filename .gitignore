@@ -1,0 +1,39 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.ipynb_checkpoints/
+
+# Virtual environments
+env/
+venv/
+ENV/
+VENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Experiment outputs
+figures/experiments/*.png
+figures/experiments/*.pdf
+
+# Files
+*.pdf
+*.csv
+*.json
+*.jsonl
+*.tgz
+
+# Temporary files
+*.log
+*.tmp
+.cache/

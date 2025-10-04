@@ -1,0 +1,22 @@
+# Core data processing
+numpy==2.0.2
+pandas==2.3.3
+matplotlib==3.9.4
+seaborn==0.13.2
+scikit-learn==1.6.1
+
+# Statistics
+krippendorff==0.8.0
+
+# LLM APIs
+anthropic==0.69.0
+litellm==1.77.5
+mistralai==1.9.11
+openai==2.1.0  # If you're using OpenAI directly
+
+# Utilities
+tqdm==4.67.1
+python-dotenv==1.1.1  # For loading API keys from .env
+
+# Data access (if using HuggingFace)
+huggingface-hub==0.35.3
