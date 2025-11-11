@@ -14,7 +14,7 @@ The LLM-as-a-judge paradigm, in which a *judge* Generative AI (GenAI) system rat
 <p align="center">
   <img src="figures/indeterminacy_examples.png" width="75%" />
   <br/>
-  <em>Figure 1: Examples of rating indeterminacy in Factuality, Toxic Language, and Relevance Classification tasks </em>
+  <em>Figure 1: Examples of rating indeterminacy in Toxicity, Factuality, Helpfulness, and Relevence rating tasks </em>
 </p>
 <br/>
 
@@ -24,7 +24,7 @@ Current approaches to judge system validation overlook rating indeterminacy by f
 <p align="center">
 <img src="figures/headline.png" width="70%" />
 
-<em><b>Figure 2: Validations based on forced-choice ratings are misleading under rating indeterminacy.</b> The best judge (GPT o3-Mini) is ranked <b>third-to-last</b> using the standard forced-choice method. Our framework, designed to correctly account for indeterminacy during judge system validation, correctly identifies the best model.</em>
+<em><b>Figure 2: Validations based on forced-choice ratings are misleading under rating indeterminacy.</b> The best judge (GPT o3-Mini) is ranked <b>fourth</b> using the standard forced-choice method. Our framework, designed to correctly account for indeterminacy during judge system validation, correctly identifies the best model.</em>
 </p>
 
 <br/>
@@ -119,7 +119,7 @@ See our [quickstart tutorial](notebooks/quickstart_tutorial.ipynb) for a hands-o
 
 ```python
 from pathlib import Path
-from datasets import loader
+from project_datasets import loader
 from config import tasks, models
 from core.client import ModelAPIClient
 from core.validator import Validator
@@ -168,7 +168,7 @@ run_results = client.load_run(
     use_hf=True  # Downloads from HuggingFace
 )
 ```
-This will automatically download existing runs data from HuggingFace and load it in for analysis. 
+This will automatically download existing runs data from HuggingFace and load it in for analysis. Once you have `run_results' loaded, you can use our framework to rank and compare judge systems. See our [quickstart tutorial](notebooks/quickstart_tutorial.ipynb) for sample analyses you can run. 
 
 Using our framework with a new rating task is easy! Just [follow these steps](notebooks/add_custom_task.ipynb) for a step by step guide on how to configure the human ratings, rating task, and prompts. 
 

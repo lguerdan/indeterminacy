@@ -18,7 +18,7 @@ from huggingface_hub import snapshot_download
 from core.response_parser import ResponseParser
 from core.rating_model import RatingModel
 from config import keys, prompts
-from datasets import loader
+from project_datasets import loader
 
 
 EXPERIMENTS_REPO_ID = "lguerdan/indeterminacy-experiments"
